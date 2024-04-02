@@ -1,0 +1,2 @@
+mongodb+srv://enukaj8:7IH7mkjRggQg6Osr@cluster0.ezgqrvp.mongodb.net/
+mongodb+srv://enukaj8:<password>@cluster0.ezgqrvp.mongodb.net/
