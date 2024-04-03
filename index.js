@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Paitent = require("./models/paitient.model");
+require("dotenv").config();
 const app = express();
 app.use(express.json());
 
@@ -61,11 +62,8 @@ app.post("/paitents/paitent", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 mongoose
-  .connect(
-    "mongodb+srv://enukaj8:7IH7mkjRggQg6Osr@cluster0.ezgqrvp.mongodb.net/A&J?retryWrites=true&w=majority"
-  )
+  .connect(process.env.MONGODB_URl)
   .then(() => {
     console.log("Connected to database");
     app.listen(3001, () => {
