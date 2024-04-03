@@ -63,7 +63,7 @@ app.post("/paitents/paitent", async (req, res) => {
   }
 });
 mongoose
-  .connect(process.env.MONGODB_URl)
+  .connect(process.env.CYCLIC_MONGODB_URl)
   .then(() => {
     console.log("Connected to database");
     app.listen(3001, () => {
