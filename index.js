@@ -63,13 +63,11 @@ app.post("/paitents/paitent", async (req, res) => {
   }
 });
 mongoose
-  .connect(
-    "MONGODB_URL=mongodb+srv://enukaj8:7IH7mkjRggQg6Osr@cluster0.ezgqrvp.mongodb.net/"
-  )
+  .connect(process.env.MONGODB_URL)
   .then(() => {
     console.log("Connected to database");
-    app.listen(3001, () => {
-      console.log("Server is running on port 3001");
+    app.listen(3000, () => {
+      console.log("Server is running on port 3000");
     });
   })
   .catch(() => {
